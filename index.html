@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invincible MC — Join the Server</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Cairo:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- floating pixel particles, purely decorative -->
+<div class="pixel-field" id="pixelField" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <div class="brand">
+      <span class="brand__block" aria-hidden="true"></span>
+      <span class="brand__name">INVINCIBLE<span class="brand__mc">MC</span></span>
+    </div>
+    <nav class="topnav">
+      <a href="#join">How to Join</a>
+      <a href="#server">Server</a>
+      <a href="#plugins">Plugins</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#support">Support</a>
+    </nav>
+    <button id="langToggle" class="lang-toggle" type="button" aria-label="Switch language">
+      <span data-en="EN / عربي" data-ar="عربي / EN">EN / عربي</span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__grass" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="eyebrow" data-en="SURVIVAL · SMP · WHITELIST OFF" data-ar="سيرفايفل · SMP · بدون قائمة بيضاء">SURVIVAL · SMP · WHITELIST OFF</p>
+      <h1 class="hero__title">
+        <span data-en="How to Join Our Server" data-ar="كيفية الانضمام إلى مجتمعنا">How to Join Our Server</span>
+      </h1>
+      <p class="hero__sub" data-en="A block-by-block guide to get you playing in under two minutes." data-ar="دليل خطوة بخطوة لتبدأ اللعب في أقل من دقيقتين.">
+        A block-by-block guide to get you playing in under two minutes.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--grass" href="https://discord.gg/z9a3cJs35" target="_blank" rel="noopener">
+          <span class="btn__icon" aria-hidden="true">⛏</span>
+          <span data-en="Join the Discord" data-ar="انضم إلى الديسكورد">Join the Discord</span>
+        </a>
+        <a class="btn btn--stone" href="#server">
+          <span data-en="Get Server IP" data-ar="احصل على IP السيرفر">Get Server IP</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO JOIN -->
+  <section id="join" class="section">
+    <h2 class="section__title">
+      <span class="section__num">01</span>
+      <span data-en="Getting Started" data-ar="خطوات البداية">Getting Started</span>
+    </h2>
+
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-card__badge">1</div>
+        <h3 data-en="Join the Discord" data-ar="انضم إلى الديسكورد">Join the Discord</h3>
+        <p data-en="Every announcement, ticket and whitelist request happens here first." data-ar="كل الإعلانات والتذاكر وطلبات الانضمام تبدأ من هنا.">
+          Every announcement, ticket and whitelist request happens here first.
+        </p>
+        <a class="link-arrow" href="https://discord.gg/z9a3cJs35" target="_blank" rel="noopener">
+          <span data-en="Click to join" data-ar="اضغط للانضمام">Click to join</span> →
+        </a>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card__badge">2</div>
+        <h3 data-en="Sign In First" data-ar="سجّل الدخول أولاً">Sign In First</h3>
+        <p data-en="Verify your account in Discord before connecting to the server." data-ar="فعّل حسابك في الديسكورد قبل الاتصال بالسيرفر.">
+          Verify your account in Discord before connecting to the server.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card__badge">3</div>
+        <h3 data-en="Reach Out to the Owner" data-ar="تواصل مع مالك السيرفر">Reach Out to the Owner</h3>
+        <p data-en="Message the server owner directly if you need anything sorted." data-ar="راسل مالك السيرفر مباشرة إذا احتجت أي مساعدة.">
+          Message the server owner directly if you need anything sorted.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card__badge">4</div>
+        <h3 data-en="Found a Bug?" data-ar="وجدت خطأ؟">Found a Bug?</h3>
+        <p data-en="Report it on Discord so the team can fix it fast." data-ar="أبلغ عنه في الديسكورد ليتم إصلاحه بسرعة.">
+          Report it on Discord so the team can fix it fast.
+        </p>
+        <a class="link-arrow" href="https://discord.gg/z9a3cJs35" target="_blank" rel="noopener">
+          <span data-en="Report a bug" data-ar="أبلغ عن خطأ">Report a bug</span> →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVER INFO -->
+  <section id="server" class="section section--dark">
+    <h2 class="section__title">
+      <span class="section__num">02</span>
+      <span data-en="Server Details" data-ar="بيانات السيرفر">Server Details</span>
+    </h2>
+
+    <div class="command-block">
+      <div class="command-block__row">
+        <span class="command-block__label" data-en="IP ADDRESS" data-ar="عنوان IP">IP ADDRESS</span>
+        <span class="command-block__value" id="serverIp">famousmc.aternos.me</span>
+        <button class="copy-btn" data-copy="famousmc.aternos.me" type="button">
+          <span data-en="Copy" data-ar="نسخ">Copy</span>
+        </button>
+      </div>
+      <div class="command-block__row">
+        <span class="command-block__label" data-en="PORT" data-ar="المنفذ">PORT</span>
+        <span class="command-block__value" id="serverPort">44832</span>
+        <button class="copy-btn" data-copy="44152" type="button">
+          <span data-en="Copy" data-ar="نسخ">Copy</span>
+        </button>
+      </div>
+    </div>
+
+    <p class="server-note">
+      <span data-en="An image of the server is shown below." data-ar="صورة من السيرفر موضحة أدناه.">An image of the server is shown below.</span>
+    </p>
+    <div class="server-image-frame">
+      <img src="mc.png.png" width="200" height="190"
+           alt="Preview screenshot of the server" data-en-alt="Preview screenshot of the server"
+           data-ar-alt="صورة من السيرفر" loading="lazy">
+    </div>
+  </section>
+
+  <!-- PLUGINS -->
+  <section id="plugins" class="section">
+    <h2 class="section__title">
+      <span class="section__num">03</span>
+      <span data-en="Plugins" data-ar="الإضافات">Plugins</span>
+    </h2>
+    <div class="inventory" role="list">
+      <div class="slot" role="listitem"><span class="slot__icon">🛡</span><span data-en="Back" data-ar="العودة">Back</span></div>
+      <div class="slot" role="listitem"><span class="slot__icon">📍</span><span data-en="TPA" data-ar="تيليبورت">TPA</span></div>
+      <div class="slot" role="listitem"><span class="slot__icon">🏗</span><span data-en="Land Claim" data-ar="حجز الأرض">Land Claim</span></div>
+      <div class="slot" role="listitem"><span class="slot__icon">💰</span><span data-en="Shop" data-ar="المتجر">Shop</span></div>
+      <div class="slot" role="listitem"><span class="slot__icon">⚒</span><span data-en="Jobs" data-ar="الوظائف">Jobs</span></div>
+      <div class="slot" role="listitem"><span class="slot__icon">🪙</span><span data-en="Economy" data-ar="الاقتصاد">Economy</span></div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section id="schedule" class="section section--dark">
+    <h2 class="section__title">
+      <span class="section__num">04</span>
+      <span data-en="Uptime" data-ar="أوقات التشغيل">Uptime</span>
+    </h2>
+    <table class="sign-table">
+      <thead>
+        <tr>
+          <th data-en="Server" data-ar="السيرفر">Server</th>
+          <th data-en="Hours" data-ar="ساعات التشغيل">Hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-en="Invincible MC" data-ar="Invincible MC">Invincible MC</td>
+          <td data-en="Online every day, 12 hours" data-ar="متصل كل يوم لمدة 12 ساعة">Online every day, 12 hours</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SUPPORT -->
+  <section id="support" class="section support">
+    <h2 class="section__title">
+      <span class="section__num">05</span>
+      <span data-en="Sign-In Support" data-ar="دعم تسجيل الدخول">Sign-In Support</span>
+    </h2>
+    <div class="sign-post">
+      <p data-en="Please sign in first." data-ar="الرجاء تسجيل الدخول.">Please sign in first.</p>
+      <p data-en="Having trouble signing in? Contact support on Discord." data-ar="إن كنت تواجه مشكلة في تسجيل الدخول، تواصل مع الدعم الفني في الديسكورد.">
+        Having trouble signing in? Contact support on Discord.
+      </p>
+      <a class="btn btn--grass" href="https://discord.gg/z9a3cJs35" target="_blank" rel="noopener">
+        <span data-en="Get Support" data-ar="احصل على الدعم">Get Support</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p data-en="Invincible MC — built block by block." data-ar="Invincible MC — بُنيت مكعبًا مكعبًا.">
+    Invincible MC — built block by block.
+  </p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
